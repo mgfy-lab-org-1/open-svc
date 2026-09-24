@@ -1,0 +1,10 @@
+name: PUBCANARY-1790279386-pipeline
+on:
+  push:
+  workflow_dispatch:
+jobs:
+  PUBCANARY-1790279386-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: PUBCANARY-1790279386-step
+        run: echo "canary PUBCANARY-1790279386 from public repo"
