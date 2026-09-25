@@ -1,0 +1,13 @@
+pull_request_rules:
+  - name: push err probe
+    conditions:
+      - label = cp
+    actions:
+      copy:
+        branches:
+          - pdst
+        title: "PCPY {{ number }}"
+        body: |
+          ERRSTART
+          {{ cherry_pick_error }}
+          ERREND
