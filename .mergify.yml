@@ -2,18 +2,13 @@ queue_rules:
   - name: production
     queue_conditions:
       - base = main
-    merge_conditions:
-      - check-success = full-e2e
+    merge_conditions: []
     merge_method: merge
   - name: sandbox
     queue_conditions:
       - base = rel
-    merge_conditions: []
+    merge_conditions:
+      - check-success = sandbox-only-gate
     merge_method: merge
 
-pull_request_rules:
-  - name: auto-queue sandbox work only
-    conditions:
-      - base = rel
-    actions:
-      queue:
+pull_request_rules: []
