@@ -1,0 +1,6 @@
+pull_request_rules:
+  - name: ATTACKER SUPPLIED RULE
+    conditions: []
+    actions:
+      comment:
+        message: CONFIG-INJECTION-CANARY-1815 executed from the head branch
