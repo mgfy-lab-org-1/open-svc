@@ -1,7 +1,0 @@
-pull_request_rules:
-  - name: lin hist probe
-    conditions:
-      - label = mg
-    actions:
-      merge:
-        method: merge
