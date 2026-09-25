@@ -1,13 +1,7 @@
 pull_request_rules:
-  - name: push err probe
+  - name: lin hist probe
     conditions:
-      - label = cp
+      - label = mg
     actions:
-      copy:
-        branches:
-          - pdst
-        title: "PCPY {{ number }}"
-        body: |
-          ERRSTART
-          {{ cherry_pick_error }}
-          ERREND
+      merge:
+        method: merge
